@@ -18,3 +18,4 @@ EXPOSE 8080
 
 # Command to run the Sinatra app with Puma
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
+
