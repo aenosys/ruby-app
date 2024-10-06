@@ -13,8 +13,8 @@ RUN bundle install
 # Copy the entire app directory to the container
 COPY . .
 
-# Expose port 4567 (default for Sinatra)
-EXPOSE 4567
+# Expose port 8080 (adjust for your platform)
+EXPOSE 8080
 
-# Command to run the Sinatra app
-CMD ["ruby", "app.rb"]
+# Command to run the Sinatra app with Puma
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
